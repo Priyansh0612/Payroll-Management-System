@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Employee</title>
+    <link rel="stylesheet" href="RemoveEmp.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Back Button -->
+        <button onclick="window.location.href='/info'">⬅ Back</button>
+
+        <h1>Remove Employee</h1>
+
+        <!-- Remove Employee Form -->
+        <form id="remove-employee-form">
+            <div class="form-group">
+                <label for="user_id">Employee ID:</label>
+                <input type="number" id="user_id" name="user_id" placeholder="Enter Employee ID to remove" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Remove Employee</button>
+            </div>
+        </form>
+
+        <!-- Message container -->
+        <div id="message"></div>
+    </div>
+
+    <script src="RemoveEmp.js"></script>
+</body>
+</html>

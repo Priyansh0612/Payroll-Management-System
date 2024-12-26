@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee Info</title>
+    <link rel="stylesheet" href="UpdateEmp.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Back Button inside a container -->
+        <div class="back-button-container">
+            <button class="back-button" onclick="window.location.href='/info'">⬅ Back</button>
+        </div>
+
+        <h1>Update Employee Information</h1>
+
+        <!-- Form to enter Employee ID -->
+        <form id="employee-id-form">
+            <div class="form-group">
+                <label for="emp-id">Employee ID</label>
+                <input type="text" id="emp-id" name="emp-id" placeholder="Enter Employee ID" required>
+            </div>
+            <!-- Fetch Employee Data Button -->
+            <button class="fetch-data-button" type="submit">Fetch Employee Data</button>
+        </form>
+
+        <!-- Add this container for displaying the update form -->
+        <div id="update-employee-container"></div> <!-- This is the missing element -->
+
+        <!-- Form to update employee information -->
+        <form id="update-employee-form" style="display:none;">
+            <div class="form-group">
+                <label for="emp-name">Name</label>
+                <input type="text" id="emp-name" name="emp-name" placeholder="Enter Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emp-phone">Phone Number</label>
+                <input type="text" id="emp-phone" name="emp-phone" placeholder="Enter Phone Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emp-email">Email</label>
+                <input type="email" id="emp-email" name="emp-email" placeholder="Enter Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emp-address">Address</label>
+                <input type="text" id="emp-address" name="emp-address" placeholder="Enter Address" required>
+            </div>
+
+            <button type="submit">Update Information</button>
+        </form>
+
+        <div id="update-message"></div>
+    </div>
+
+    <script src="UpdateEmp.js"></script>
+</body>
+</html>

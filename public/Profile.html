@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="Profile.css"> <!-- Include your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Back Button -->
+        <button class="back-button" onclick="window.location.href='/dashboard'">⬅ Back</button>
+
+        <h1>Profile</h1>
+<!-- Profile Photo Section -->
+<div class="photo-section">
+    <img src="Images/images.jpeg" alt="Profile Photo">
+</div>
+        <!-- Display Branch Info -->
+        <div class="profile-info">
+            <p><strong>Branch ID:</strong> <span id="branch-id">Loading...</span></p>
+            <p><strong>Branch Name:</strong> <span id="branch-name">Loading...</span></p>
+            <p><strong>Phone Number:</strong> <span id="phone-number">Loading...</span></p>
+            <p><strong>Email:</strong> <span id="email-address">Loading...</span></p>
+
+        <!-- Button to Change Password -->
+        <button class="change-password-btn" onclick="togglePasswordForm()">Change Password</button>
+
+        <!-- Change Password Form (Hidden by default) -->
+        <div id="password-form" class="password-form" style="display: none;">
+            <h3>Change Password</h3>
+            <form id="password-form-submit">
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <div class="show-password">
+                    <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">
+                    <label for="show-password">Show Password</label>
+                </div>
+                <button type="submit">Submit</button>
+                <button type="button" onclick="togglePasswordForm()">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Logout Button -->
+        <!-- <button class="logoutbtn" onclick="window.location.href='/logout'">Logout</button> -->
+    </div>
+
+    <script src="Profile.js"></script> <!-- Include your JavaScript file -->
+    <script>
+        // Function to toggle password form visibility
+        function togglePasswordForm() {
+            const form = document.getElementById('password-form');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Function to toggle password visibility
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('new-password');
+            const showPassword = document.getElementById('show-password');
+            passwordInput.type = showPassword.checked ? 'text' : 'password';
+        }
+
+        // Simulate fetching profile data (Replace with actual API calls if available)
+    </script>
+</body>
+</html>

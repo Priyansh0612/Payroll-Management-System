@@ -1,0 +1,209 @@
+/* General Reset */
+body, h1, form, button, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/Images/Background image .webp'); /* Update to match your design path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110vh;
+    color: #ffffff;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+    overscroll-behavior-block: none;  
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff; /* Red for Remove Employee */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff; /* White labels for contrast */
+    font-size: 0.95rem;
+}
+
+/* Input Styling */
+input {
+    width: 90%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #f4f4f9;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(217, 83, 79, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    width: 20%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #007bff; /* Red button for Remove Employee */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #ac2925;
+    transform: translateY(0);
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Message Styling */
+#message {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Success Message */
+#message.success {
+    color: #5cb85c; /* Green for success */
+}
+
+/* Error Message */
+#message.error {
+    color: #d9534f; /* Red for error */
+}
+
+/* Employee List Table */
+#employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#employee-table th, #employee-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+#employee-table th {
+    background-color: #d9534f;
+    color: white;
+    text-transform: uppercase;
+}
+
+#employee-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle alternating row color */
+}
+
+#employee-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    #employee-table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    input, button {
+        font-size: 0.85rem;
+    }
+
+    #employee-table th, #employee-table td {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+}

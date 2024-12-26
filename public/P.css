@@ -1,0 +1,151 @@
+/* General Reset */
+body, h2, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/Images/Background image .webp'); /* Replace with the correct background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px; /* For smaller screens */
+    backdrop-filter: blur(6px); /* Adds blur effect to the background */
+    overscroll-behavior-block: none;  
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 360px; /* Restrict maximum width for better responsiveness */
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading Styling */
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Slightly larger heading */
+    color: #f39c12; /* Golden color for a modern look */
+    font-weight: bold;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db; /* Highlight with the primary color */
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.4); /* Add glow effect on focus */
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF; /* Primary color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+    background-color: #003f7f; /* Even darker shade on click */
+    transform: translateY(0); /* Reset lift */
+}
+
+p a {
+    color: #1d78c1; /* Change this to the desired color for the email link */
+    text-decoration: none; /* Removes the underline */
+}
+
+p a:hover {
+    color: #0f5793; /* Change the color when hovered */
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+p a:focus {
+    outline: 2px solid #196eb5; /* Optional: Adds a focus ring when the link is focused */
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    display: none; /* Hidden by default */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .login-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.7rem; /* Adjust heading size */
+    }
+
+    input, button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.4rem; /* Further reduce heading size for small devices */
+    }
+
+    input, button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
