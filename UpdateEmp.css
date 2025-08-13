@@ -1,0 +1,152 @@
+/* General Reset */
+body, h1, form, button, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/Images/Background image .webp'); /* Update to match your design path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110vh;
+    color: #ffffff;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+    overscroll-behavior-block: none;  
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center;
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* White header */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ffffff; /* White labels for contrast */
+}
+
+/* Input Styling */
+input {
+    width: 90%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #f4f4f9;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+/* Fetch Data Button Styling (Medium size) */
+.fetch-data-button {
+    width: 60%; /* Medium size button */
+    margin-top: 20px;
+}
+
+/* Back Button Styling (Small size) */
+.back-button {
+    width: 20%; /* Small size button */
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 15px 15px; /* Reduced padding for smaller button */
+    margin-left: 0; /* Align to the left */
+    display: inline-block;
+    text-align: center;
+}
+
+/* Hover and Active States */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #004085; /* Even darker blue on active */
+    transform: translateY(0);
+}
+
+/* Update Message Styling */
+#update-message {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Success Message */
+#update-message.success {
+    color: #5cb85c; /* Green for success */
+}
+
+/* Error Message */
+#update-message.error {
+    color: #d9534f; /* Red for error */
+}
+
+/* Back Button Container */
+.back-button-container {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}

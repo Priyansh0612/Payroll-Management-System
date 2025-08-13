@@ -1,0 +1,191 @@
+/* General styles for the page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/Images/Background image .webp'); /* Ensure this path matches */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 120vh;
+    color: #ffffff;
+    backdrop-filter: blur(6px); /* Matches the depth effect */
+    overflow-y:  auto;
+    overscroll-behavior-block: none;    
+}
+
+/* Styling for the main container */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Centered Title */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff; /* Golden header color */
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff; /* Match the header's golden color */
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"], 
+input[type="date"], 
+input[type="number"] {
+    width: 70%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+input[type="number"]:focus {
+    border-color: #4682B4; /* Steel Blue focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(70, 130, 180, 0.8);
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF; /* Blue theme */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Table Styles */
+.table-container {
+    max-height: 400px;
+    overflow-y: auto; /* Scrollable table content */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+table th, table td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #ffffff;
+}
+
+table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+    cursor: pointer;
+}
+
+
+/* Payroll Summary */
+#payrollSummary {
+    margin-top: 20px;
+    padding: 20px;
+    background-color:rgba(255, 255, 255, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px; /* Added bottom margin for spacing */
+}
+
+#payrollSummary:hover {
+    transform: scale(1.02);
+}
+
+#payrollSummary p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Done Button */
+#doneButton {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1em;
+    background-color: #007BFF; /* Green color for Done */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 20px; /* Added margin-top to avoid overlapping */
+}
+
+#doneButton:hover {
+    background-color: #0056b3; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    #search {
+        width: 90%;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    #doneButton {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}

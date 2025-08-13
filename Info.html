@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Info</title>
+    <link rel="stylesheet" href="Info.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Back Button -->
+        <button onclick="window.location.href='/Dashboard'">⬅ Back</button>
+        <h1>Employee Information</h1>
+
+        <!-- Search bar for filtering table data -->
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search by Name or Employee ID">
+        
+
+        <!-- Filter options -->
+    <div class = "filter-options">
+            <label for="filter">Sort by:</label>
+            <select id="filter" onchange="applySorting()">
+                <option value="default">Select an option</option>
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="hire-asc">Hire Date (Oldest First)</option>
+                <option value="hire-desc">Hire Date (Newest First)</option>
+            </select>
+        </div>
+</div>
+       <!-- Employee table -->
+       <div class="table-container">
+        <table id="payroll-table">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email ID</th>
+                    <th>Address</th>
+                    <th>Position</th>
+                    <th>Hire Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be injected here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    
+        <!-- Button to manage employees -->
+        <div class="button-container">
+            <button onclick="window.location.href='NewEmp.html'" title="Add a new employee to the system">Add Employee</button>
+            <button onclick="window.location.href='RemoveEmp.html'" title="Remove an employee from the system">Remove Employee</button>
+            <button onclick="window.location.href='UpdateEmp.html'" title="Update employee information">Update Employee Information</button>
+        </div>
+
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <script src="Info.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Payroll</title>
+    <link rel="stylesheet" href="GeneratePayroll.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="window.location.href='/payroll'">⬅ Back</button>
+        <h1>Generate Payroll</h1>
+
+        <!-- Employee ID Form -->
+        <form id="employee-id-form">
+            <div class="form-group">
+                <label for="emp-id">Employee ID</label>
+                <input type="text" id="emp-id" name="emp-id" placeholder="Enter Employee ID" required>
+            </div>
+            <button type="submit">Fetch Employee Data</button>
+        </form>
+
+        <!-- Table to display Employee Info -->
+        <table id="payroll-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Employee data will be injected here by JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Button to generate payroll -->
+        <button id="generatePayroll" style="display: none;">Generate Payroll</button>
+
+        <!-- Pay Period and Employee Input Form -->
+        <div id="payroll-form" class="payroll-form" style="display: none;">
+            <div class="form-container">
+                <label for="payPeriodStart">Pay Period Start Date:</label>
+                <input type="date" id="payPeriodStart">
+
+                <label for="payPeriodEnd">Pay Period End Date:</label>
+                <input type="date" id="payPeriodEnd">
+            </div>
+
+            <!-- Hours Worked and Payroll Generation -->
+            <div id="payrollSection" class="payroll-section">
+                <label for="hoursWorked">Hours Worked:</label>
+                <input type="number" id="hoursWorked" placeholder="Enter hours worked">
+
+                <!-- <label for="taxDeduction">Tax Deduction:</label>
+                <input type="number" id="taxDeduction" placeholder="Enter tax deduction"> -->
+
+                <button type="button" id="submitPayroll">Submit Payroll</button>
+
+            </div>
+        </div>
+
+        <!-- Payroll Summary -->
+        <div id="payrollSummary" class="payroll-summary" style="display: none;">
+            <!-- Payroll details will be displayed here -->
+        </div>
+
+        <!-- Done Button -->
+        <button id="doneButton" style="display: none;" onclick="window.location.href='/payroll'">Done</button>
+
+    </div>
+
+    <script src="GeneratePayroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* General styles for the page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/Images/Background image .webp'); /* Update this path to the correct one */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    color: #ffffff;
+    backdrop-filter: blur(6px); /* Adds depth to the background */
+    overflow: auto;
+    overscroll-behavior-block: none;  
+}
+
+/* Styling for the container */
+.container {
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff; /* Golden header color for contrast */
+    margin-bottom: 20px;
+}
+
+/* Search and Filter Section */
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.search-bar select {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+
+/* Table container for scrollable content */
+.table-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border for clarity */
+    border-radius: 8px; /* Optional: Rounded corners */
+    position: relative;
+}
+
+/* Preserve table width inside scrollable container */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Fixed header for the table */
+.table-container thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #4682B4; /* Steel Blue */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #5c5858;
+}
+
+table th {
+    background-color:  #007BFF;
+    color: white;
+    font-size: 1.2 em;
+    text-transform: uppercase;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #333333;
+}
+
+table tbody tr:hover {
+    background-color: #dddddd71;
+    cursor: pointer;
+}
+
+/* Buttons and Interactions */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input[type="text"],
+    .search-bar select {
+        width: 100%;
+    }
+}

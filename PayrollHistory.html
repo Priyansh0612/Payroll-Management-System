@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management</title>
+    <link rel="stylesheet" href="PayrollHistory.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Back Button -->
+        <button class="back-button left" onclick="window.location.href='/payroll'">⬅ Back</button>
+
+        <!-- Header -->
+        <h1 class="header">Payroll History</h1>
+
+        <!-- Search and Filter Section -->
+        <div class="search-bar">
+            <input type="text" id="searchPayroll" placeholder="Search by Name or ID" />
+            <select id="departmentFilter">
+                <option value="all">All Departments</option>
+                <!-- Dynamically populated department options will go here -->
+            </select>
+        </div>
+
+        <!-- Payroll Table inside Scrollable Container -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pay ID</th>
+                        <th>Employee ID</th>
+                        <th>Employee Name</th>
+                        <th>Department</th>
+                        <th>Hourly Pay</th>
+                        <th>Hours Worked</th>
+                        <th>Gross Pay</th>
+                        <th>Tax Deduction</th>
+                        <th>Net Pay</th>
+                        <th>Paid On</th>
+                    </tr>
+                </thead>
+                <tbody id="payrollData">
+                    <!-- Data will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Link to JS file that handles search, filter, and dynamic content -->
+    <script src="/PayrollHistory.js"></script>
+
+</body>
+</html>
