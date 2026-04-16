@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Manage.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="Images/logo.png" alt="Logo" class="logo">
+        <h1>Payroll Management System</h1>
+
+        <!-- Profile Button -->
+        <button class="profilebutton" onclick="window.location.href='/profile'">Profile</button>
+
+        <!-- Logout Button -->
+        <button class="logoutbtn" onclick="window.location.href='/logout'">Logout</button>
+
+        <!-- Header Section -->
+        <div class="header">
+            <!-- Dashboard Title -->
+            <h1>Dashboard</h1>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Employees</h3>
+                <p id="total-employees">Loading...</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Payroll</h3>
+                <p id="total-payroll">Loading...</p>
+            </div>
+            <div class="stat-card">
+                <h3>Departments</h3>
+                <p id="department-count">Loading...</p>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-container"
+            style="display: flex; gap: 15px; margin-top: 20px; justify-content: center; flex-wrap: wrap;">
+            <div class="chart-card"
+                style="background: rgba(0, 0, 0, 0.6); padding: 15px; border-radius: 12px; width: 45%; min-width: 250px;">
+                <h3 style="margin-bottom: 10px; font-size: 1rem;">Payroll by Department</h3>
+                <canvas id="payrollChart"></canvas>
+            </div>
+            <div class="chart-card"
+                style="background: rgba(0, 0, 0, 0.6); padding: 15px; border-radius: 12px; width: 45%; min-width: 250px;">
+                <h3 style="margin-bottom: 10px; font-size: 1rem;">Employee Distribution</h3>
+                <canvas id="employeeChart"></canvas>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <div class="button-container">
+
+            <!-- Manage Payroll Button -->
+            <button onclick="window.location.href='/payroll'">Manage Payroll</button>
+
+            <!-- Manage Employees Button -->
+            <button onclick="window.location.href='/info'">Manage Employees</button>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="Manage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+/* General Reset */
+body,
+h1,
+form,
+button,
+table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0f172a;
+    background-image:
+        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+        radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 110vh;
+    color: #ffffff;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+    overscroll-behavior-block: none;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    /* Red for Remove Employee */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+    /* White labels for contrast */
+    font-size: 0.95rem;
+}
+
+/* Input Styling */
+input {
+    width: 90%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #f4f4f9;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(217, 83, 79, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #007BFF, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, #0056b3, #004085);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+}
+
+/* Message Styling */
+#message {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Success Message */
+#message.success {
+    color: #5cb85c;
+    /* Green for success */
+}
+
+/* Error Message */
+#message.error {
+    color: #d9534f;
+    /* Red for error */
+}
+
+/* Employee List Table */
+#employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#employee-table th,
+#employee-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+#employee-table th {
+    background-color: #007bff;
+    /* Consistent Blue */
+    color: white;
+    text-transform: uppercase;
+}
+
+#employee-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Subtle alternating row color */
+}
+
+#employee-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Highlight on hover */
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input,
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    #employee-table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    input,
+    button {
+        font-size: 0.85rem;
+    }
+
+    #employee-table th,
+    #employee-table td {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+}

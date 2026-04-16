@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Employee</title>
+    <link rel="stylesheet" href="RemoveEmp.css">
+    <link rel="stylesheet" href="Toast.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Back Button -->
+        <!-- Back Button -->
+        <button class="back-button" onclick="window.location.href='/info'">
+            <span>&#8592;</span> Back
+        </button>
+
+        <h1>Remove Employee</h1>
+
+        <!-- Remove Employee Form -->
+        <form id="remove-employee-form">
+            <div class="form-group">
+                <label for="user_id">Employee ID:</label>
+                <input type="text" id="user_id" name="user_id" placeholder="Enter Badge ID (e.g., B1-007)" required
+                    pattern="B\d+-\d+" title="Use badge format: B1-007">
+            </div>
+            <div class="form-group">
+                <button type="submit">Fetch Employee</button>
+            </div>
+        </form>
+
+        <!-- Employee Preview Section (hidden by default) -->
+        <div id="employee-preview"
+            style="display: none; margin-top: 30px; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+            <h2>Employee Details</h2>
+            <div id="employee-details"></div>
+            <div style="margin-top: 20px; display: flex; gap: 10px;">
+                <button id="confirm-remove-btn"
+                    style="background: #e74c3c; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                    Remove Employee
+                </button>
+                <button id="cancel-btn"
+                    style="background: #95a5a6; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                    Cancel
+                </button>
+            </div>
+        </div>
+
+        <!-- Message container -->
+        <div id="message"></div>
+    </div>
+
+    <script src="Toast.js"></script>
+    <script src="js/common.js"></script>
+    <script src="RemoveEmp.js"></script>
+</body>
+
+</html>
