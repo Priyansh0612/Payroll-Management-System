@@ -6,7 +6,6 @@
   [![Node.js](https://img.shields.io/badge/Node.js-v16+-success.svg?logo=nodedotjs)](https://nodejs.org) 
   [![Express.js](https://img.shields.io/badge/Express-v4.17-lightgrey.svg?logo=express)](https://expressjs.com) 
   [![MySQL](https://img.shields.io/badge/MySQL-v5.7+-blue.svg?logo=mysql)](https://www.mysql.com) 
-  [![License](https://img.shields.io/badge/License-MIT-green.svg)](#)
 </div>
 
 ---
@@ -130,6 +129,6 @@ Designed and engineered by Priyansh Patel.
 
 For questions, troubleshooting, or support:
 - ✉️ **Email:** priyanshp0612@gmail.com
-- **LinkedIn:** [Insert Your LinkedIn Profile URL]
 
-*All rights reserved under the MIT License standard deployment configurations.*
+
+*All rights reserved.*
