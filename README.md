@@ -123,11 +123,11 @@ To login, you can use the default administrator credentials:
 
 ---
 
-## 👨‍💻 Support & Contact
+## 👨‍💻 Contributors & Support
 
-Designed and engineered by Priyansh Patel.
+Designed and engineered collaboratively by the course project team. 
 
-For questions, troubleshooting, or support:
+For questions, troubleshooting, or support regarding this repository:
 - ✉️ **Email:** priyanshp0612@gmail.com
 
 
